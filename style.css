@@ -6,7 +6,6 @@
     font-family: 'Open Sans', sans-serif;
 }
 body {
-    padding: 30px 13px;
     min-height: 100vh;
     background-size: cover;
     background-image: url(/images/bg-desktop.svg);
@@ -91,6 +90,9 @@ body {
     transform: translateY(-10px);
 }
 @media (max-width:998px) {
+    body {
+        padding: 30px 13px;
+    }
     .container main {
         grid-template-columns: 1fr;
     }
