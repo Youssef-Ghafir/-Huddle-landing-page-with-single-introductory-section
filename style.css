@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+body {
+    padding: 30px 13px;
+    min-height: 100vh;
+    background-size: cover;
+    background-image: url(/images/bg-desktop.svg);
+    background-repeat: no-repeat;
+    background-color: #674BB1;
+}
+.container {
+    max-width: 85%;
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.container header {
+    margin-top: 20px;
+}
+.container header img {
+    height: 50px;
+}
+.container main {
+    color: #fff;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 40px;
+}
+.container main .right {
+    transform: translateY(50px);
+}
+.container main .left img {
+    width: 100%;
+}
+.container main h1 { 
+    font-size: 2.5rem;
+    max-width: 500px;
+    margin-bottom: 1.5rem;
+}
+.container main p {
+    max-width: 500px;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    font-weight: normal;
+    margin-bottom: 1.5rem;
+}
+.container main button {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    padding: 1rem 4rem;
+    font-size: 1.1rem;
+    background-color: #ffff;
+    border-radius: 30px;
+    transition: .2s all;
+    border: 1px solid transparent;
+    cursor: pointer;
+    outline: none;
+    color: #674BB1;
+}
+.container main button:hover {
+    border: 1px solid #fff;
+    color: #fff;
+    background-color: transparent;
+}
+.container footer {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+}
+.container footer a {
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    color: #fff;
+    cursor: pointer;
+    transition: .2s all;
+    font-size: 1.3rem;
+}
+.container footer a:hover {
+    transform: translateY(-10px);
+}
+@media (max-width:998px) {
+    .container main {
+        grid-template-columns: 1fr;
+    }
+    .container main .right {
+        text-align: center;
+        transform: translateY(0);
+    }
+    .container header {
+        display: flex;
+        margin-bottom: 3rem;
+    }
+    .container main h1,
+    .container main p {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .container footer {
+        justify-content: center;
+        margin-top: 3rem;
+    }
+}
+@media (max-width:500px) {
+    .container {
+        max-width: 90%;
+    }
+    .container main h1 {
+        font-size: 1.5rem;
+        max-width: 300px;
+    }
+    .container main p {
+        font-size: 1rem;
+    }
+    .container header img {
+        height: 30px;
+    }
+}
